@@ -1,0 +1,30 @@
+.mottoAndStar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+
+  width: 336px;
+  height: 24px;
+}
+
+.motto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+}
+
+.star {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: right;
+  padding: 0px;
+  gap: 10px;
+  border: none;
+  background-color: transparent;
+}

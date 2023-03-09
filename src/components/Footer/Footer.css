@@ -1,0 +1,26 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 16px;
+  gap: 10px;
+
+  width: 368px;
+  height: 56px;
+  background-color: var(--color-granite);
+  /* Body small */
+
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  text-align: center;
+
+  /* foam */
+
+  color: var(--color-foam);
+}
