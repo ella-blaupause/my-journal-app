@@ -16,10 +16,10 @@ function App() {
       <Content>
         <EntryForm>
           <FormTitle />
-          <FormInputs inputId={"motto"} rowsValue={7}>
+          <FormInputs inputId={"motto"} rowsValue={"2"}>
             Motto
           </FormInputs>
-          <FormInputs inputId={"notes"} rowsValue={20}>
+          <FormInputs inputId={"notes"} rowsValue={"10"}>
             Notes
           </FormInputs>
           <Button>Creat</Button>

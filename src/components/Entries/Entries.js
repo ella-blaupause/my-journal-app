@@ -3,40 +3,52 @@ import Date from "../Date/Date";
 import MottoAndStar from "../MottoAndStar/MottoAndStar";
 import Notes from "../Notes/Notes";
 import Divider from "../Divider/Divider";
+import { Fragment } from "react";
+
+const entries = [
+  {
+    id: 1000,
+    date: "Feb 5, 2025",
+    motto: "We are in a state of chaos",
+    notes:
+      "Today I learned about React State. It was fun! I can't wait to learn more.",
+  },
+  {
+    id: 999,
+    date: "Feb 4, 2025",
+    motto: "Props, Props, Props",
+    notes:
+      "Today I learned about React Props. Mad props to everyone who understands this!",
+  },
+  {
+    id: 998,
+    date: "Feb 3, 2025",
+    motto: "How to nest components online fast",
+    notes:
+      "Today I learned about React Components and how to nest them like a pro. Application design is so much fun!",
+  },
+  {
+    id: 997,
+    date: "Feb 2, 2025",
+    motto: "I'm a React Developer",
+    notes: "My React-ion when I learned about React: 😍",
+  },
+];
 
 export default function Entries() {
   return (
     <div className="entries">
-      <Date>FEB 27, 2028</Date>
       <div className="entryContent">
-        <MottoAndStar isFill>That`s life in the city</MottoAndStar>
-        <Notes>
-          Si sine causa? quae fuerit causa, mox videro; interea hoc tenebo, si
-          mihi. Et quidem se repellere, idque instituit docere sic omne animal,
-          simul atque.
-        </Notes>
-        <Divider />
-
-        <Date>FEB 26, 2028</Date>
-        <div className="entryContent">
-          <MottoAndStar>That`s life in the city</MottoAndStar>
-          <Notes>
-            Si sine causa? quae fuerit causa, mox videro; interea hoc tenebo, si
-            mihi. Et quidem se repellere, idque instituit docere sic omne
-            animal, simul atque.
-          </Notes>
-          <Divider />
-        </div>
-
-        <Date>FEB 27, 2028</Date>
-        <div className="entryContent">
-          <MottoAndStar>That`s life in the city</MottoAndStar>
-          <Notes>
-            Si sine causa? quae fuerit causa, mox videro; interea hoc tenebo, si
-            mihi. Et quidem se repellere, idque instituit docere sic omne
-            animal, simul atque.
-          </Notes>
-        </div>
+        {entries.map((entry) => {
+          return (
+            <Fragment key={entry.id}>
+              <Date>{entry.date}</Date>
+              <MottoAndStar>{entry.motto}</MottoAndStar>
+              <Notes>{entry.notes}</Notes>
+              <Divider hidden={entry.id === 997 ? true : false} />
+            </Fragment>
+          );
+        })}
       </div>
     </div>
   );

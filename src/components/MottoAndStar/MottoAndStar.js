@@ -1,12 +1,20 @@
 import "./MottoAndStar.css";
+import { useState } from "react";
 
-export default function MottoAndStar({ children, isFill }) {
+export default function MottoAndStar({ children }) {
+  const [isFavorite, setIsFavorite] = useState(false);
+
   return (
     <div className="mottoAndStar">
       <h3 className="motto ">"{children}"</h3>
 
-      <button className="star">
-        {isFill ? (
+      <button
+        className="star"
+        onClick={() => {
+          setIsFavorite(!isFavorite);
+        }}
+      >
+        {isFavorite ? (
           <svg
             width="24"
             height="24"

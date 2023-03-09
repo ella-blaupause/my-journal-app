@@ -1,21 +1,20 @@
 .button {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 12px 40px;
-  gap: 8px;
-
-  width: 133px;
-  height: 48px;
-  background: var(--color-nemo);
-  border-radius: 4px;
+  appearance: none;
   border: none;
-
-  font-family: "Open Sans";
-  font-style: normal;
+  width: fit-content;
+  padding: 12px 40px;
+  background: var(--color-nemo);
   font-weight: 700;
   font-size: 16px;
-  line-height: 24px;
-  text-align: center;
+  border-radius: 5px;
   color: var(--color-foam);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--color-nemo-dark);
+}
+
+.button:active {
+  background-color: var(--color-nemo-mid);
 }
