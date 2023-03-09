@@ -21,7 +21,8 @@ body {
   gap: 32px;
 
   position: relative;
-  width: 368px;
+  width: 100vw;
+  /* width: 368px; */
   height: 1360px;
 
   background: var(--color-foam);
