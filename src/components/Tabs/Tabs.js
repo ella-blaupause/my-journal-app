@@ -1,17 +1,29 @@
 import "./Tabs.css";
 import Tab from "../Tab/Tab";
 
-export default function Tabs() {
+export default function Tabs({
+  onShowAllEntries,
+  onShowFavoriteEntries,
+  filter,
+  allEntriesCount,
+  favoriteEntriesCount,
+}) {
   return (
     <div className="tabs">
-      {/* <li> */}
-      <Tab color="var(--color-nemo)" countColor="white" count="3">
+      <Tab
+        onClick={onShowAllEntries}
+        isActive={filter === "all" ? true : false}
+        count={allEntriesCount}
+      >
         All Entries
       </Tab>
-      {/*  </li>
-      <li> */}
-      <Tab count="1">Favorites</Tab>
-      {/* ‚ */}
+      <Tab
+        onClick={onShowFavoriteEntries}
+        isActive={filter === "favorites" ? true : null}
+        count={favoriteEntriesCount}
+      >
+        Favorites
+      </Tab>
     </div>
   );
 }
