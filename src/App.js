@@ -5,7 +5,8 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Tabs from "./components/Tabs/Tabs";
 import Entries from "./components/Entries/Entries";
-import { useState } from "react";
+import useLocalStorageState from "use-local-storage-state";
+/* import { useState } from "react";  */
 import { uid } from "uid";
 
 const initialEntries = [
@@ -43,11 +44,15 @@ const initialEntries = [
 ];
 
 function App() {
-  const [entries, setEntries] = useState(initialEntries);
+  const [entries, setEntries] = useLocalStorageState("entries", {
+    defaultValue: initialEntries,
+  });
   const favoriteEntries = entries.filter(
     (favoriteEntry) => favoriteEntry.isFavorite === true
   );
-  const [filter, setFilter] = useState("all");
+  const [filter, setFilter] = useLocalStorageState("filter", {
+    defaultValue: "all",
+  });
 
   function handleAddEntry(newEntry) {
     const date = new Date().toLocaleDateString("en-us", {

@@ -10,6 +10,7 @@ export default function FormInputs({ inputId, children, rowsValue, name }) {
         cols={40}
         rows={rowsValue}
         id={inputId}
+        required
       ></textarea>
     </div>
   );
