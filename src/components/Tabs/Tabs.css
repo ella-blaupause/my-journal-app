@@ -1,11 +1,5 @@
 .tabs {
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0px;
-  gap: 16px;
-  list-style: none;
-
-  /*  width: 114px;
-    height: 24px; */
+  gap: 32px;
 }

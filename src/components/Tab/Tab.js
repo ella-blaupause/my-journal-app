@@ -1,17 +1,12 @@
 import "./Tab.css";
 
-export default function Tab({ children, count, color, countColor }) {
+export default function Tab({ children, count, isActive, onClick }) {
   return (
-    <>
-      <p className="tab-text" style={{ color: color }}>
-        {children}
-      </p>
-      <button
-        className="tab-count"
-        style={{ backgroundColor: color, color: countColor }}
-      >
+    <button className="tab" type="button" onClick={onClick}>
+      <p>{children}</p>
+      <span className={`tab-count${isActive ? " tab-count__active" : ""}`}>
         {count}
-      </button>
-    </>
+      </span>
+    </button>
   );
 }
